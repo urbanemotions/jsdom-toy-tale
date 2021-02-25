@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="container">
+    <div id = "toy-collection", class="container">
       <form class="add-toy-form">
         <h3>Create a toy!</h3>
 
@@ -46,6 +46,14 @@
     </p>
 
     <div id="toy-collection"></div>
-    <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript" src="src/index.js">
+      fetch("https://ipinfo.io/json")
+      .then(function (response) {
+      return response.json();
+      })
+      .catch(function (error) {
+      console.log("Error: " + error);
+      });
+    </script>
   </body>
 </html>
